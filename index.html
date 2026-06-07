@@ -1,0 +1,17 @@
+<h1>Blog Home</h1>
+
+<a href="/create">Create Post</a>
+<a href="/login">Login</a>
+<a href="/register">Register</a>
+
+<hr>
+
+{% for post in posts %}
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+
+    <a href="/post/{{ post.id }}">View</a>
+    <a href="/delete/{{ post.id }}">Delete</a>
+
+    <hr>
+{% endfor %}
